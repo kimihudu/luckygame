@@ -1,0 +1,75 @@
+<com.github.mmin18.widget.FlexLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/shape">
+
+    <TextView
+        android:id="@+id/lb_gameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_centerX="50% - 44%"
+        android:text="G1"
+        />
+
+    <View
+        android:layout_width="1sp"
+        app:layout_height="prev.height"
+        android:background="@color/black"
+        app:layout_left="prev.right + 2%"
+        app:layout_centerY="prev.centerY"
+        />
+
+    <TextView
+        android:id="@+id/lb_picked_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_left="prev.right + 3%"
+        android:text="12-34-56-78-09-01-02-03"
+        />
+
+    <View
+        android:layout_width="1sp"
+        app:layout_height="prev.height"
+        android:background="@color/black"
+        app:layout_centerX="50% + 26% "
+        app:layout_centerY="prev.centerY"
+        />
+
+    <TextView
+        android:id="@+id/lb_game_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_centerX="prev.centerX + 5%"
+        app:layout_centerY="prev.centerY "
+        android:text="C1"
+        />
+
+    <View
+        android:layout_width="1sp"
+        app:layout_height="prev.height"
+        android:background="@color/black"
+        app:layout_centerX="prev.centerX + 5%"
+        app:layout_centerY="prev.centerY"
+        />
+
+    <TextView
+        android:id="@+id/lb_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red_dark"
+        android:textSize="17sp"
+        app:layout_centerX="prev.centerX + 7%"
+        app:layout_centerY="prev.centerY "
+        android:text="100"
+
+        />
+
+</com.github.mmin18.widget.FlexLayout>

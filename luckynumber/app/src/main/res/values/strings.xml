@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Lucky</string>
+    <string name="lb_total">TOTAL:</string>
+    <string name="lb_dump_totals"><u>$100</u></string>
+    <string name="lb_add_money"><u>Add Amount</u></string>
+    <string name="lb_edit_ticket"><b><u>Change Amount</u></b></string>
+    <string name="server">Lucky.ddnsgeek.com</string>
+    <string name="port">21</string>
+    <string name="usr">Lucky</string>
+    <string name="pass">175501</string>
+    <!--<string name="server">faccioapparel.com</string>-->
+    <!--<string name="port">21</string>-->
+    <!--<string name="usr">devUsr@faccioapparel.com</string>-->
+    <!--<string name="pass">B@@B@@faccio</string>-->
+    <string name="loc1">BK1</string>
+    <string name="loc2">FA1</string>
+    <string name="loc3">JL1</string>
+    <string name="loc4">JS1</string>
+    <string name="loc5">JS2</string>
+    <string name="loc6">JW1</string>
+    <string name="loc7">JW2</string>
+    <string name="loc8">MD1</string>
+    <string name="loc9">MV1</string>
+    <string name="loc10">MV2</string>
+    <string name="loc11">SE1</string>
+    <string name="loc12">tzf1CJx}Vc2</string>
+    <string name="lbPin">Ener Pin Number</string>
+    <string name="lbSetPin">Set 5 DIGIT FOR PIN</string>
+    <string name="master_pin">55555</string>
+</resources>
+
+

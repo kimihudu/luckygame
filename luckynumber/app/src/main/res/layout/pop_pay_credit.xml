@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.mmin18.widget.FlexLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shadow"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <TextView
+        android:id="@+id/lb_gameNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Payment"
+        android:textSize="23sp"
+        app:layout_centerX="50%"
+        app:layout_top="10%" />
+
+
+    <ImageButton
+        android:id="@+id/btnMoreMoney"
+        android:adjustViewBounds="true"
+        android:background="@drawable/cus_btn_normal"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/btn_moremoney"
+        android:textColor="@color/black"
+        app:layout_centerX="prev.centerX - 23%"
+        app:layout_centerY="prev.centerY + 32%"
+        android:layout_height="wrap_content"
+        app:layout_width="parent.width * 0.41" />
+
+    <ImageButton
+        android:id="@+id/btnSavePoint"
+        android:adjustViewBounds="true"
+        android:background="@drawable/cus_btn_normal"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/btn_savepoint"
+        android:textColor="@color/black"
+        app:layout_centerX="prev.centerX + 44%"
+        app:layout_centerY="prev.centerY"
+        app:layout_height="prev.height"
+        app:layout_width="prev.width" />
+
+    <ImageButton
+        android:id="@+id/btnGoBack"
+        android:adjustViewBounds="true"
+        android:background="@drawable/cus_btn_normal"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/btn_back"
+        android:textColor="@color/black"
+        app:layout_centerX="50%"
+        app:layout_centerY="prev.centerY + 17%"
+        app:layout_height="prev.height"
+        android:layout_width="wrap_content"/>
+
+
+</com.github.mmin18.widget.FlexLayout>

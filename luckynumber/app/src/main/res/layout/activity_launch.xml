@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.mmin18.widget.FlexLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:windowSoftInputMode="adjustPan"
+    android:id="@+id/mainView"
+    tools:context="lkphandev.com.luckynumber.LaunchActivity">
+
+    <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:src="@mipmap/main_bg"
+    android:alpha="0.5"/>
+
+    <ImageView
+        android:src="@mipmap/lucklogo"
+        app:layout_centerX="50%"
+        app:layout_centerY="50% - 40%"
+        app:layout_height="parent.width * 0.3"
+        app:layout_width="parent.height * 0.5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="WELCOME TO LUCKY WALL"
+        android:textSize="23sp"
+        app:layout_centerX="50%"
+        app:layout_centerY="prev.centerY + 17%"
+        android:textColor="@color/black"/>
+
+
+
+    <!--<include layout="@layout/frag_btnloc"/>-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/toggleLoc1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:background="@drawable/toggle_out_line"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingLeft="5sp"-->
+        <!--android:paddingRight="5sp"-->
+        <!--app:layout_centerX="50%"-->
+        <!--app:layout_centerY="prev.centerY + 10%"-->
+        <!--app:layout_height="parent.width * 0.14">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/btnLoc1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/toggle_widget_background"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/loc1"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/btnLoc2"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/toggle_widget_background"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/loc2"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/btnLoc3"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/toggle_widget_background"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/loc3"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/btnLoc4"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/toggle_widget_background"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/loc4"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/btnLoc5"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/toggle_widget_background"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/loc5"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/btnLoc6"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/toggle_widget_background"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/loc6"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textStyle="bold" />-->
+
+    <!--</RadioGroup>-->
+
+    <!--&lt;!&ndash;<line loc 2>&ndash;&gt;-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/toggleLoc2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:background="@drawable/toggle_out_line"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingLeft="5sp"-->
+        <!--android:paddingRight="5sp"-->
+        <!--app:layout_centerX="50%"-->
+        <!--app:layout_centerY="prev.centerY + 10%"-->
+        <!--app:layout_height="parent.width * 0.14">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/btnLoc7"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/toggle_widget_background"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/loc7"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/btnLoc8"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/toggle_widget_background"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/loc8"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/btnLoc9"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/toggle_widget_background"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/loc9"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/btnLoc10"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/toggle_widget_background"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/loc10"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/btnLoc11"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/toggle_widget_background"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/loc11"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textStyle="bold" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/btnLoc12"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:layout_marginLeft="1dp"-->
+            <!--android:layout_marginTop="1dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/toggle_widget_background"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="N/A"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textStyle="bold" />-->
+
+    <!--</RadioGroup>-->
+
+    <TextView
+        android:id="@+id/lbCell_Pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="CELL NO "
+        android:textSize="23sp"
+        app:layout_centerX="50%"
+        app:layout_centerY="prev.centerY + 17%"
+        android:textColor="@color/black"/>
+
+    //this workaround for softkey open will scroll up screen, avoid to hide textfiel
+    //need to add android:windowSoftInputMode="adjustPan"
+
+    <ScrollView
+        app:layout_centerX="50%"
+        app:layout_centerY="prev.centerY + 10%"
+        app:layout_height="parent.width * 0.2"
+        app:layout_width="parent.width * 0.6">
+
+        <EditText
+            android:id="@+id/txtPhoneNo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColorHint="@color/transparent"
+            android:inputType="phone"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+    </ScrollView>
+
+
+    <ImageButton
+        android:id="@+id/btnStart"
+        android:adjustViewBounds="true"
+        android:background="@drawable/cus_btn_normal"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/playnow"
+        app:layout_centerX="50%"
+        app:layout_centerY="prev.centerY + 20%"
+        app:layout_height="parent.width * 0.2"
+        app:layout_width="parent.height * 0.2" />
+
+    <ImageButton
+        android:id="@+id/btnPin"
+        android:adjustViewBounds="true"
+        android:background="@drawable/cus_btn_normal"
+        android:scaleType="fitCenter"
+        app:layout_centerX="50%"
+        app:layout_centerY="prev.centerY"
+        app:layout_height="prev.height"
+        app:layout_width="prev.width"
+        />
+
+</com.github.mmin18.widget.FlexLayout>

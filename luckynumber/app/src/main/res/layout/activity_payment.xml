@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.mmin18.widget.FlexLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lkphandev.com.luckynumber.PaymentActivity">
+
+    <TextView
+        android:background="@drawable/shadow"
+        app:layout_height="parent.width * 0.2"
+        app:layout_width="parent.width * 0.6"
+        app:layout_centerX="50%"
+        app:layout_centerY="17%"
+        android:text="SUBMIT"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:typeface="sans"
+        android:textColor="@color/blue_light"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL"
+        android:textSize="23sp"
+        app:layout_centerX="50%"
+        app:layout_centerY="prev.centerY + 26%"/>
+
+    <TextView
+        android:id="@+id/lbTotal"
+        android:background="@drawable/shadow"
+        android:text="TOTAL"
+        android:textColor="@color/blue_light"
+        android:gravity="center"
+        android:textSize="23sp"
+        app:layout_centerX="50%"
+        app:layout_centerY="prev.centerY + 7%"
+        app:layout_height="parent.width * 0.14"
+        app:layout_width="parent.width * 0.5"/>
+
+    <TextView
+        android:id="@+id/lbPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL"
+        android:textColor="@color/yellow_light"
+        android:textSize="23sp"
+        app:layout_centerX="50% -21% "
+        app:layout_centerY="prev.centerY + 14%"/>
+
+    <TextView
+        android:id="@+id/lbCredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL"
+        android:textColor="@color/yellow_light"
+        android:textSize="23sp"
+        app:layout_centerX="50% + 21% "
+        app:layout_centerY="prev.centerY"/>
+
+    <ImageButton
+        android:id="@+id/btnPoint"
+        android:background="@drawable/cus_btn_normal"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/btn_point"
+        app:layout_centerX="50% - 21%"
+        app:layout_centerY="50% + 23%"
+        android:layout_height="wrap_content"
+        app:layout_width="parent.width * 0.41"
+
+        />
+
+    <ImageButton
+        android:id="@+id/btnCredit"
+        android:background="@drawable/cus_btn_normal"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/btn_topup"
+        app:layout_centerX="prev.centerX + 43%"
+        app:layout_centerY="prev.centerY"
+        app:layout_height="prev.height"
+        app:layout_width="prev.width" />
+
+    <ImageButton
+        android:id="@+id/btnNewGame"
+        android:background="@drawable/cus_btn_normal"
+        app:layout_centerX="prev.centerX - 1%"
+        app:layout_centerY="prev.centerY + 17%"
+        app:layout_height="parent.width * 0.23"
+        app:layout_width="parent.width * 0.32"
+        android:src="@mipmap/btn_new"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        />
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnG6"-->
+        <!--style="@style/BtnCus"-->
+        <!--app:layout_centerX="50% + 17%"-->
+        <!--app:layout_centerY="prev.centerY"-->
+        <!--app:layout_height="parent.width * 0.23"-->
+        <!--app:layout_width="parent.width * 0.23" />-->
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnG4"-->
+        <!--style="@style/BtnCus"-->
+        <!--app:layout_centerX="prev.centerX"-->
+        <!--app:layout_centerY="prev.centerY - 17% "-->
+        <!--app:layout_height="parent.width * 0.23"-->
+        <!--app:layout_width="parent.width * 0.23" />-->
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnG2"-->
+        <!--style="@style/BtnCus"-->
+        <!--app:layout_centerX="prev.centerX"-->
+        <!--app:layout_centerY="prev.centerY - 17% "-->
+        <!--app:layout_height="parent.width * 0.23"-->
+        <!--app:layout_width="parent.width * 0.23" />-->
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:background="@drawable/cus_btn_normal"
+        app:layout_height="parent.width * 0.23"
+        app:layout_width="parent.width * 0.32"
+        app:layout_centerY="prev.centerY"
+        app:layout_centerX="prev.centerX - 35%"
+        android:src="@mipmap/btn_back_round"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+
+</com.github.mmin18.widget.FlexLayout>

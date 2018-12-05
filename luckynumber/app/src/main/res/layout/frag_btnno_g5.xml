@@ -1,0 +1,470 @@
+<com.github.mmin18.widget.FlexLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutBtnNo">
+
+    <com.github.mmin18.widget.FlexLayout
+        android:layout_width="match_parent"
+        app:layout_height="84%"
+        app:layout_centerY="50% ">
+
+        <Button
+            android:id="@+id/btn0"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="0"
+            app:layout_centerX="50% * 0.65"
+            app:layout_centerY="5%"
+            app:layout_height="parent.width * 0.11"
+            app:layout_width="parent.width * 0.14" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="1"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="2"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="3"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="4"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="5"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="6"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="7"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="8"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="9"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <!--colum2-->
+        <Button
+            android:id="@+id/btn19"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="9"
+            app:layout_centerX="prev.centerX + 17% "
+            app:layout_centerY="prev.centerY"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn18"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="8"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY - 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn17"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="7"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY - 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn16"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="6"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY - 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn15"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="5"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY - 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn14"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="4"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY - 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn13"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="3"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY - 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn12"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="2"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY - 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn11"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="1"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY - 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn10"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="0"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY - 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <!--col3-->
+        <Button
+            android:id="@+id/btn20"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="0"
+            app:layout_centerX="prev.centerX + 17%"
+            app:layout_centerY="prev.centerY"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn21"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="1"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn22"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="2"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn23"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="3"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn24"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="4"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn25"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="5"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn26"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="6"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn27"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="7"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn28"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="8"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <Button
+            android:id="@+id/btn29"
+            android:background="@drawable/cus_btnno_normal"
+            android:text="9"
+            app:layout_centerX="prev.centerX"
+            app:layout_centerY="prev.centerY + 10%"
+            app:layout_height="prev.height"
+            app:layout_width="prev.width" />
+
+        <!--col4-->
+        <!--<Button-->
+            <!--android:id="@+id/btn39"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="39"-->
+            <!--app:layout_centerX="prev.centerX + 17% "-->
+            <!--app:layout_centerY="prev.centerY"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn38"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="38"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY - 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn37"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="37"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY - 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn36"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="36"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY - 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn35"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="35"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY - 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn34"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="34"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY - 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn33"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="33"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY - 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn32"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="32"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY - 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn31"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="31"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY - 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn30"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="30"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY - 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--&lt;!&ndash;col5&ndash;&gt;-->
+        <!--<Button-->
+            <!--android:id="@+id/btn40"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="40"-->
+            <!--app:layout_centerX="prev.centerX + 17%"-->
+            <!--app:layout_centerY="prev.centerY"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn41"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="41"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY + 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn42"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="42"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY + 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn43"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="43"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY + 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn44"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="44"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY + 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn45"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="45"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY + 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn46"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="46"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY + 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn47"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="47"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY + 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn48"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="48"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY + 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn49"-->
+            <!--android:background="@drawable/cus_btnno_normal"-->
+            <!--android:text="49"-->
+            <!--app:layout_centerX="prev.centerX"-->
+            <!--app:layout_centerY="prev.centerY + 10%"-->
+            <!--app:layout_height="prev.height"-->
+            <!--app:layout_width="prev.width" />-->
+
+
+    </com.github.mmin18.widget.FlexLayout>
+</com.github.mmin18.widget.FlexLayout>
+
+

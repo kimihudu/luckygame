@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.mmin18.widget.FlexLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shadow"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!--<TextView-->
+        <!--android:background="@drawable/shape"-->
+        <!--app:layout_width="80%"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="FreePlay:"-->
+        <!--android:textSize="23sp"-->
+        <!--app:layout_centerX="50%"-->
+        <!--app:layout_top="10%"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:textColor="@color/blue"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/lb_AmountFreeplay"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="$100"-->
+        <!--android:textSize="23sp"-->
+        <!--app:layout_centerX="prev.centerX + 23%"-->
+        <!--app:layout_centerY="prev.centerY"-->
+        <!--android:textColor="@color/red_dark"/>-->
+
+    <TextView
+        android:id="@+id/lb_gameNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lb_edit_ticket"
+        android:textSize="23sp"
+        app:layout_centerX="50%"
+        app:layout_top="prev.centerY + 10%" />
+
+    <EditText
+        android:id="@+id/txtAmount"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_centerX="50%"
+        android:layout_height="wrap_content"
+        app:layout_width="parent.width * 0.6"
+        app:layout_top="prev.centerY + 14%"
+         />
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/btnFreeplay"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:background="@drawable/cus_btn_normal"-->
+        <!--android:scaleType="fitCenter"-->
+        <!--android:src="@mipmap/ic_launcher_round"-->
+        <!--android:textColor="@color/black"-->
+        <!--app:layout_centerX="prev.centerX - 30%"-->
+        <!--app:layout_centerY="prev.centerY + 17%"-->
+        <!--app:layout_height="prev.height * 1.4"-->
+        <!--app:layout_width="prev.height *1.4" />-->
+
+    <ImageButton
+        android:id="@+id/btnSave"
+        android:adjustViewBounds="true"
+        android:background="@drawable/cus_btn_normal"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/btn_ok"
+        android:textColor="@color/black"
+        app:layout_centerX="prev.centerX - 32%"
+        app:layout_centerY="prev.centerY + 17%"
+        app:layout_height="prev.height *1.4"
+        app:layout_width="prev.height *1.4" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:adjustViewBounds="true"
+        android:background="@drawable/cus_btn_normal"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/btn_delete"
+        android:textColor="@color/black"
+        app:layout_centerX="prev.centerX + 30%"
+        app:layout_centerY="prev.centerY"
+        app:layout_height="prev.height"
+        app:layout_width="prev.width" />
+
+    <ImageButton
+        android:id="@+id/btnCancel"
+        android:adjustViewBounds="true"
+        android:background="@drawable/cus_btn_normal"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/btn_cancel"
+        android:textColor="@color/black"
+        app:layout_centerX="prev.centerX + 30%"
+        app:layout_centerY="prev.centerY"
+        app:layout_height="prev.height"
+        app:layout_width="prev.width" />
+
+
+</com.github.mmin18.widget.FlexLayout>

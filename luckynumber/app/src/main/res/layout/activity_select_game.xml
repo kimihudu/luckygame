@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.mmin18.widget.FlexLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainView"
+    tools:context="lkphandev.com.luckynumber.SelectGameActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/main_bg"
+        android:alpha="0.5"/>
+
+    <ImageButton
+        android:id="@+id/btnG1"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/btn_g1"
+        android:background="@drawable/cus_btn_normal"
+        app:layout_centerX="50% - 17%"
+        app:layout_centerY="50% - 35%"
+        app:layout_height="parent.width * 0.32"
+        app:layout_width="parent.width * 0.32"
+        />
+
+    <ImageButton
+        android:id="@+id/btnG3"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/btn_g3"
+        android:background="@drawable/cus_btn_normal"
+        app:layout_centerX="prev.centerX"
+        app:layout_centerY="prev.centerY + 21%"
+        app:layout_height="prev.width"
+        app:layout_width="prev.width" />
+
+    <ImageButton
+        android:id="@+id/btnG5"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/btn_g5"
+        android:background="@drawable/cus_btn_normal"
+        app:layout_centerX="prev.centerX"
+        app:layout_centerY="prev.centerY + 21%"
+        app:layout_height="prev.width"
+        app:layout_width="prev.width" />
+
+    <ImageButton
+        android:id="@+id/btnG6"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/btn_g6"
+        android:background="@drawable/cus_btn_normal"
+        app:layout_centerX="50% + 21%"
+        app:layout_centerY="prev.centerY"
+        app:layout_height="prev.width"
+        app:layout_width="prev.width" />
+
+    <ImageButton
+        android:id="@+id/btnG4"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/btn_g4"
+        android:background="@drawable/cus_btn_normal"
+        app:layout_centerX="prev.centerX"
+        app:layout_centerY="prev.centerY - 21% "
+        app:layout_height="prev.width"
+        app:layout_width="prev.width" />
+
+    <ImageButton
+        android:id="@+id/btnG2"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/btn_g2"
+        android:background="@drawable/cus_btn_normal"
+        app:layout_centerX="prev.centerX"
+        app:layout_centerY="prev.centerY - 21% "
+        app:layout_height="prev.width"
+        app:layout_width="prev.width" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:background="@drawable/cus_btn_normal"
+        app:layout_height="parent.width * 0.23"
+        app:layout_width="parent.height * 0.17"
+        app:layout_centerY="50% + 40%"
+        app:layout_centerX="50%"
+        android:src="@mipmap/btn_back_round"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/btnReplay"
+        android:background="@drawable/cus_btn_normal"
+        app:layout_height="prev.height * 0.5"
+        app:layout_width="prev.width * 1.4"
+        app:layout_centerY="prev.centerY - prev.height"
+        app:layout_centerX="50%"
+        android:src="@mipmap/btn_replay"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+
+</com.github.mmin18.widget.FlexLayout>

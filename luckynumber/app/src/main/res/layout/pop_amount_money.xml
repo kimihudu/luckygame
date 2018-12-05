@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.mmin18.widget.FlexLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shadow"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        app:layout_top="23%"
+        app:layout_centerX="50%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lb_add_money"
+        android:textSize="23sp"
+        />
+
+    <EditText
+        android:id="@+id/txtAmount"
+        app:layout_centerX="50%"
+        app:layout_height="parent.width * 0.2 "
+        app:layout_width="parent.width * 0.6"
+        app:layout_top="prev.centerY +14%"
+        android:textSize="17sp"
+        android:inputType="number"
+        android:textStyle="bold"
+        android:gravity="center"
+       />
+
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:background="@drawable/cus_btn_normal"
+        android:textColor="@color/black"
+        app:layout_height="prev.height * 0.8"
+        app:layout_width="prev.height"
+        app:layout_centerX="prev.centerX - 20%"
+        app:layout_centerY="prev.centerY + 17%"
+        android:src="@mipmap/btn_ok"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+    <ImageButton
+        android:id="@+id/btnCancel"
+        android:background="@drawable/cus_btn_normal"
+        android:textColor="@color/black"
+        app:layout_height="prev.height"
+        app:layout_width="prev.width"
+        app:layout_centerX="prev.centerX + 30%"
+        app:layout_centerY="prev.centerY"
+        android:src="@mipmap/btn_cancel"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+
+</com.github.mmin18.widget.FlexLayout>

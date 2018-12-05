@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item
+                android:bottom="1dp"
+                android:left="-1dp"
+                android:right="-1dp"
+                android:top="1dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/white" />
+                    <corners android:radius="3dp"/>
+                </shape>
+
+            </item>
+            <item
+                android:bottom="1dp"
+                android:left="0dp"
+                android:right="0dp"
+                android:top="1dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/orange" />
+                    <corners android:radius="3dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:drawable="@color/blue" android:state_pressed="true" />
+    <item android:state_checked="false">
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item
+                android:bottom="3dp"
+                android:left="-1dp"
+                android:right="-1dp"
+                android:top="3dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/grey_dark" />
+                    <corners android:radius="3dp" />
+                </shape>
+            </item>
+            <item
+                android:bottom="3dp"
+                android:left="1dp"
+                android:right="1dp"
+                android:top="3dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/transparent" />
+                    <corners android:radius="3dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
+
+
+
