@@ -302,4 +302,18 @@
         app:layout_width="prev.width"
         />
 
+<!--    <ImageButton-->
+<!--        android:id="@+id/btnHistory"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:background="@drawable/cus_btn_normal"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        app:layout_centerX="50%"-->
+<!--        app:layout_centerY="prev.centerY + 14%"-->
+<!--        app:layout_height="prev.height"-->
+<!--        app:layout_width="prev.width"-->
+<!--        android:src="@mipmap/btn_view"-->
+<!--        />-->
+
+
+
 </com.github.mmin18.widget.FlexLayout>

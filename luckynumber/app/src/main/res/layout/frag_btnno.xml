@@ -6,7 +6,7 @@
 
     <com.github.mmin18.widget.FlexLayout
         android:layout_width="match_parent"
-        app:layout_height="84%"
+        app:layout_height="85%"
         app:layout_centerY="50% ">
 
         <Button
@@ -15,7 +15,7 @@
             android:text="Quick Pick"
             app:layout_centerX="50% * 0.32"
             app:layout_centerY="5%"
-            app:layout_height="parent.width * 0.11"
+            app:layout_height="parent.width * 0.12"
             app:layout_width="parent.width * 0.14" />
 
         <Button
@@ -23,7 +23,7 @@
             android:background="@drawable/cus_btnno_normal"
             android:text="01"
             app:layout_centerX="prev.centerX"
-            app:layout_centerY="prev.centerY + 10%"
+            app:layout_centerY="prev.centerY + 8%"
             app:layout_height="prev.height"
             app:layout_width="prev.width" />
 
@@ -465,6 +465,7 @@
 
 
     </com.github.mmin18.widget.FlexLayout>
+
 </com.github.mmin18.widget.FlexLayout>
 
 

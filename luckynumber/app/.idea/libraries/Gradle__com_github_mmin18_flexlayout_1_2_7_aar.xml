@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.mmin18:flexlayout:1.2.7@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4a2d8c600e5fa4265f18d6e8ad7feab2/flexlayout-1.2.7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4a2d8c600e5fa4265f18d6e8ad7feab2/flexlayout-1.2.7/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mmin18/flexlayout/1.2.7/f51d36e35747fa3f422f2092fe0a051ed0bb57f9/flexlayout-1.2.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mmin18/flexlayout/1.2.7/5f97ebc62f9643f5d5882a95392b34a7bd1460dc/flexlayout-1.2.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -48,8 +48,8 @@
 
                 <ListView
                     android:id="@+id/listGames"
-                    app:layout_centerY="44%"
-                    app:layout_height="80%"
+                    app:layout_centerY="50%"
+                    app:layout_height="99%"
                     app:layout_width="parent.width" />
 
             </com.github.mmin18.widget.FlexLayout>

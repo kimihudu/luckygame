@@ -1,17 +1,13 @@
 package lkphandev.com.luckynumber;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputFilter;
-import android.text.Selection;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
@@ -35,11 +31,7 @@ import android.widget.Toast;
 import com.github.mmin18.widget.FlexLayout;
 import com.google.gson.Gson;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.ListIterator;
-import java.util.Random;
 
 public class PickingActivity extends AppCompatActivity {
 
@@ -136,6 +128,8 @@ public class PickingActivity extends AppCompatActivity {
                 totalMoney = games.getTotals();
 
         }
+
+        //TODO: select layout for game
         switch (gameName) {
             case "G3":
                 setContentView(R.layout.activity_picking_g4);
@@ -144,7 +138,17 @@ public class PickingActivity extends AppCompatActivity {
                 controlG1toG4();
                 break;
             case "G1":
+                setContentView(R.layout.activity_picking_g1);
+                numberOfBtnNo = 51; //--> 011320lk - update lotte 50
+                MAX_NO = 23;
+                controlG1toG4();
+                break;
             case "G2":
+                setContentView(R.layout.activity_picking_g2);
+                numberOfBtnNo = 50; //--> update 3 march
+                MAX_NO = 23;
+                controlG1toG4();
+                break;
             case "G4":
                 setContentView(R.layout.activity_picking);
                 numberOfBtnNo = 50; //--> update 3 march
@@ -214,24 +218,25 @@ public class PickingActivity extends AppCompatActivity {
         lbPoint.setText(pointBal);
         lbTotal.setText(calTotalMoney());
 
+        //TODO: tranfer game name backend with frontend
         switch (gameName) {
             case "G1":
-                lbGameType.setText("LUCKY MAX");
+                lbGameType.setText(R.string.G1);
                 break;
             case "G2":
-                lbGameType.setText("LUCKY SIX");
+                lbGameType.setText(R.string.G2);
                 break;
             case "G3":
-                lbGameType.setText("LUCKY DICE"); // --> update follow require
+                lbGameType.setText(R.string.G3); // --> update follow require
                 break;
             case "G4":
-                lbGameType.setText("LUCKY GRAND"); // --> update follow require
+                lbGameType.setText(R.string.G4); // --> update follow require
                 break;
             case "G5":
-                lbGameType.setText("LUCKY PICK 4");
+                lbGameType.setText(R.string.G5);
                 break;
             case "G6":
-                lbGameType.setText("LUCKY 123");
+                lbGameType.setText(R.string.G6);
                 break;
         }
 
@@ -298,6 +303,7 @@ public class PickingActivity extends AppCompatActivity {
                     case MotionEvent.ACTION_UP:
                         btnView.setBackgroundResource(R.drawable.cus_btn_normal);
                         Bundle bundle = new Bundle();
+                        bundle.putString("from", PickingActivity.this.getClass().getSimpleName());
                         bundle.putString("games", new Gson().toJson(games));
                         Intent nextI = new Intent(PickingActivity.this, ViewGamesActivity.class);
                         nextI.putExtras(bundle);
@@ -760,7 +766,10 @@ public class PickingActivity extends AppCompatActivity {
         switch (noOfPairRandom) {
             case 1:
                 switch (gameName) {
+                    //011320lk - add 50 for lucky Max
                     case "G1":
+                        quickPick = Ultis.getRandomNumberInTimes(1,1,50);
+                        break;
                     case "G2":
                     case "G4":
                         quickPick = Ultis.getRandomNumberInTimes(1);
@@ -773,7 +782,10 @@ public class PickingActivity extends AppCompatActivity {
                 break;
             case 2:
                 switch (gameName) {
+                    //011320lk - add 50 for lucky Max
                     case "G1":
+                        quickPick = Ultis.getRandomNumberInTimes(2,1,50);
+                        break;
                     case "G2":
                     case "G4":
                         quickPick = Ultis.getRandomNumberInTimes(2);
@@ -786,7 +798,10 @@ public class PickingActivity extends AppCompatActivity {
                 break;
             case 3:
                 switch (gameName) {
+                    //011320lk - add 50 for lucky Max
                     case "G1":
+                        quickPick = Ultis.getRandomNumberInTimes(3,1,50);
+                        break;
                     case "G2":
                     case "G4":
                         quickPick = Ultis.getRandomNumberInTimes(3);
@@ -798,7 +813,10 @@ public class PickingActivity extends AppCompatActivity {
                 break;
             case 4:
                 switch (gameName) {
+                    //011320lk - add 50 for lucky Max
                     case "G1":
+                        quickPick = Ultis.getRandomNumberInTimes(4,1,50);
+                        break;
                     case "G2":
                     case "G4":
                         quickPick = Ultis.getRandomNumberInTimes(4);
@@ -810,7 +828,10 @@ public class PickingActivity extends AppCompatActivity {
                 break;
             case 5:
                 switch (gameName) {
+                    //011320lk - add 50 for lucky Max
                     case "G1":
+                        quickPick = Ultis.getRandomNumberInTimes(5,1,50);
+                        break;
                     case "G2":
                     case "G4":
                         quickPick = Ultis.getRandomNumberInTimes(5);
@@ -823,7 +844,10 @@ public class PickingActivity extends AppCompatActivity {
                 break;
             case 6:
                 switch (gameName) {
+                    //011320lk - add 50 for lucky Max
                     case "G1":
+                        quickPick = Ultis.getRandomNumberInTimes(6,1,50);
+                        break;
                     case "G2":
                     case "G4":
                         quickPick = Ultis.getRandomNumberInTimes(6);
@@ -835,7 +859,10 @@ public class PickingActivity extends AppCompatActivity {
                 break;
             case 7:
                 switch (gameName) {
+                    //011320lk - add 50 for lucky Max
                     case "G1":
+                        quickPick = Ultis.getRandomNumberInTimes(7,1,50);
+                        break;
                     case "G2":
                     case "G4":
                         quickPick = Ultis.getRandomNumberInTimes(7);
@@ -847,7 +874,10 @@ public class PickingActivity extends AppCompatActivity {
                 break;
             case 8:
                 switch (gameName) {
+                    //011320lk - add 50 for lucky Max
                     case "G1":
+                        quickPick = Ultis.getRandomNumberInTimes(8,1,50);
+                        break;
                     case "G2":
                     case "G4":
                         quickPick = Ultis.getRandomNumberInTimes(8);
@@ -967,14 +997,22 @@ public class PickingActivity extends AppCompatActivity {
     }
 
     private Boolean validateAmount(String moneyBid) {
-        int _moneyBid = Integer.parseInt(moneyBid);
-        int amount = Integer.parseInt(games.getTotals());
-        int credit = Integer.parseInt(games.getCreditBal());
-        int point = Integer.parseInt(games.getPointBal());
 
-        if ((amount + _moneyBid) > credit && (amount + _moneyBid) > point)
-            return false;
-        return true;
+        try{
+            int _moneyBid = Integer.parseInt(moneyBid);
+            int amount = Integer.parseInt(games.getTotals());
+            int credit = Integer.parseInt(games.getCreditBal());
+            int point = Integer.parseInt(games.getPointBal());
+
+            if ((amount + _moneyBid) > credit && (amount + _moneyBid) > point)
+                return false;
+            return true;
+
+        }catch(Exception e){
+            Log.e("validateAmount",e.getMessage());
+        }
+
+        return false;
     }
 
 }

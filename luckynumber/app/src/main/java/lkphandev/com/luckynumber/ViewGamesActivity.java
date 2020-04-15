@@ -1,14 +1,13 @@
 package lkphandev.com.luckynumber;
 
-import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Build;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.InputFilter;
+import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -19,8 +18,6 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -36,7 +33,11 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static java.lang.Integer.parseInt;
+//import android.os.Handler;
+//import android.widget.ArrayAdapter;
+//import android.widget.Button;
+
+//import static java.lang.Integer.parseInt;
 
 public class ViewGamesActivity extends AppCompatActivity {
     ListView listTicket;
@@ -117,12 +118,26 @@ public class ViewGamesActivity extends AppCompatActivity {
                         break;
                     case MotionEvent.ACTION_UP:
                         btnBack.setBackgroundResource(R.drawable.cus_btn_normal);
+
+
                         Bundle bundle = new Bundle();
                         bundle.putString("from", ViewGamesActivity.this.getClass().getSimpleName());
+                        Intent prevI;
+
+                        //just check condition for view local ticket
+                        // if it has history ticket --> no need to pass games obj
+                        String prevAct = getPrevAct();
                         bundle.putString("games", new Gson().toJson(games));
-                        Intent prevI = new Intent(ViewGamesActivity.this, PickingActivity.class);
+
+                        if( ViewLocalHistoryActivity.class.getSimpleName().contains(prevAct)){
+                            prevI = new Intent(ViewGamesActivity.this, ViewLocalHistoryActivity.class);
+                        }else{
+                            prevI = new Intent(ViewGamesActivity.this, PickingActivity.class);
+                        }
+
                         prevI.putExtras(bundle);
                         startActivity(prevI);
+
                         break;
                 }
                 return false;
@@ -140,7 +155,8 @@ public class ViewGamesActivity extends AppCompatActivity {
                         btnSubmit.setBackgroundResource(R.drawable.cus_btn_normal);
                         games.calculateMoney();
 
-                        if (validateAmount()) {
+                        //TODO: validate amount balance and subgame in game
+                        if (validateAmount() && games.getTotalTickets() > 0) {
                             Bundle bundle = new Bundle();
                             bundle.putString("from", ViewGamesActivity.this.getClass().getSimpleName());
                             bundle.putString("games", new Gson().toJson(games));
@@ -314,12 +330,14 @@ public class ViewGamesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                //TODO: DELETE subgame in game for games list
                 game.deleteTicket(ticket);
                 popupWindow.dismiss();
                 //use simple adapter --> just check list dataset update
                 gameList.remove(selectedPos);
                 lbTotals.setText(totalMoney());
                 listTicketAdapter.notifyDataSetChanged();
+
             }
         });
 
@@ -359,6 +377,18 @@ public class ViewGamesActivity extends AppCompatActivity {
         return returnGames;
     }
 
+    private String getPrevAct(){
+
+        try{
+            Bundle bundle = getIntent().getExtras();
+            return bundle.getString("from");
+        }catch (NullPointerException err){
+            Log.d("getPrevAct",err.getMessage());
+        }
+
+        return null;
+    }
+
     private String totalMoney() {
         int _money = 0;
         for (HashMap ticket : gameList) {
@@ -370,25 +400,43 @@ public class ViewGamesActivity extends AppCompatActivity {
 
     // validate edit amount with acct balance
     private Boolean validateAmount(String newBid, String current) {
-        int _newBid = Integer.parseInt(newBid);
-        int _current = Integer.parseInt(current);
-        int amount = Integer.parseInt(games.getTotals());
-        int credit = Integer.parseInt(games.getCreditBal());
-        int point = Integer.parseInt(games.getPointBal());
 
-        if ((amount - _current + _newBid) > credit && (amount - _current + _newBid) > point)
-            return false;
-        return true;
+
+        try{
+            int _newBid = Integer.parseInt(newBid);
+            int _current = Integer.parseInt(current);
+            int amount = Integer.parseInt(games.getTotals());
+            int credit = Integer.parseInt(games.getCreditBal());
+            int point = Integer.parseInt(games.getPointBal());
+
+            if ((amount - _current + _newBid) > credit && (amount - _current + _newBid) > point)
+                return false;
+            return true;
+
+        }catch (Exception e){
+            Log.e("validateAmount","ViewGameActivity(x,x) - " + e.getMessage());
+        }
+
+        return false;
+
     }
 
     //validata total with acct balance
     private Boolean validateAmount() {
-        int amount = Integer.parseInt(games.getTotals());
-        int credit = Integer.parseInt(games.getCreditBal());
-        int point = Integer.parseInt(games.getPointBal());
 
-        if (amount > credit && amount > point)
-            return false;
-        return true;
+        try{
+            int amount = Integer.parseInt(games.getTotals());
+            int credit = Integer.parseInt(games.getCreditBal());
+            int point = Integer.parseInt(games.getPointBal());
+
+            if (amount > credit && amount > point)
+                return false;
+            return true;
+
+        }catch (Exception e){
+            Log.e("validateAmount","ViewGameActivity() - " + e.getMessage());
+        }
+
+        return false;
     }
 }

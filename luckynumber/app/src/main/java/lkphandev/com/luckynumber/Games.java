@@ -1,6 +1,6 @@
 package lkphandev.com.luckynumber;
 
-import java.lang.reflect.Array;
+//import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -88,6 +88,7 @@ public class Games {
         this.phone_no = phone_no;
     }
 
+
     public Game getGameByName(String gameName) {
         for (Game _game: games){
             if (_game.getGame_name().equals(gameName))
@@ -96,6 +97,7 @@ public class Games {
         return null;
     }
 
+
     public void calculateMoney(){
         int totals = 0;
         for (Game game:games){
@@ -103,6 +105,14 @@ public class Games {
             totals += Double.parseDouble(game.getTotal());
         }
         setTotals(String.valueOf(totals));
+    }
+
+    public int getTotalTickets() {
+        int _totalTickets = 0;
+
+        for (Game game:games) _totalTickets += game.getTickets().size();
+
+        return _totalTickets;
     }
 
 

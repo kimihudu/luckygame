@@ -202,8 +202,11 @@
                         android:textColor="@color/black"
                         android:textStyle="bold"/>
 
+<!--022420lk - turn off C4 for game dice-->
+
                     <RadioButton
                         android:id="@+id/btnC4"
+                        android:visibility="gone"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="1dp"

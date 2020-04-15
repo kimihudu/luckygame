@@ -1,18 +1,16 @@
 package lkphandev.com.luckynumber;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.view.ContextThemeWrapper;
-import android.text.InputFilter;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
@@ -22,16 +20,21 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.mmin18.widget.FlexLayout;
 import com.google.gson.Gson;
+
+//import android.support.v7.view.ContextThemeWrapper;
+//import android.text.InputFilter;
+//import android.view.inputmethod.InputMethodManager;
+//import android.widget.EditText;
+//import com.github.mmin18.widget.FlexLayout;
+
+//import org.w3c.dom.Text;
 
 public class PaymentActivity extends AppCompatActivity {
 
@@ -319,10 +322,15 @@ public class PaymentActivity extends AppCompatActivity {
     private class RequestFTPserver extends AsyncTask<Games, Void, Boolean> {
         AlertDialog.Builder builderDialog = new AlertDialog.Builder(PaymentActivity.this);
 
+
+        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         protected Boolean doInBackground(Games... games) {
             Context context = PaymentActivity.this.getApplicationContext();
-            return Ultis.save2Sever(context, games[0], "Ticket");
+
+            //
+            Boolean flag = Ultis.save2Sever(context, games[0], "Ticket");
+            return flag;
         }
 
         @Override
@@ -330,6 +338,7 @@ public class PaymentActivity extends AppCompatActivity {
             Log.i("RequestFTPserver", result.toString());
             if (result) {
                 builderDialog.setMessage("Your tickets is submitted");
+//                Ultis.save2Local()
 //                builderDialog.setCancelable(true);
 
                 builderDialog.setPositiveButton(
@@ -357,8 +366,14 @@ public class PaymentActivity extends AppCompatActivity {
 //                            }
 //                        });
 
+
                 AlertDialog alertConfirm = builderDialog.create();
                 alertConfirm.show();
+                //022420lk - update alert dialog text size
+                TextView text_alert = alertConfirm.findViewById(android.R.id.message);
+                String font_size = getResources().getString(R.string.alert_text_size);
+                text_alert.setTextSize(Float.parseFloat(font_size));
+
 
             } else
                 Toast.makeText(getApplicationContext(), "connection server fail...", Toast.LENGTH_SHORT).show();

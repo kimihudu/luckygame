@@ -1,15 +1,15 @@
 package lkphandev.com.luckynumber;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.sqlite.SQLiteException;
 import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.InputFilter;
+import android.os.Handler;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
@@ -23,16 +23,18 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.github.mmin18.widget.FlexLayout;
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonObject;
 
-import java.util.ArrayList;
+//import android.text.InputFilter;
+//import android.widget.ProgressBar;
+//import com.google.gson.JsonArray;
+
+//import java.util.ArrayList;
 
 public class SelectGameActivity extends AppCompatActivity {
     ImageButton btnG1;
@@ -42,6 +44,7 @@ public class SelectGameActivity extends AppCompatActivity {
     ImageButton btnG5;
     ImageButton btnG6;
     ImageButton btnBack;
+    ImageButton btnHistory;
     ImageButton btnReplay;
     PopupWindow popupWindow;
     FlexLayout mainView;
@@ -57,6 +60,7 @@ public class SelectGameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_game);
 
+        //get the games from prev activity
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             games = new Gson().fromJson(bundle.getString("games"), Games.class);
@@ -64,7 +68,8 @@ public class SelectGameActivity extends AppCompatActivity {
                 currentSection = bundle.getString("from");
         }
 
-        if (currentSection.equals("LaunchActivity") || currentSection.equals("PaymentActivity")) {
+        //TODO: COMPLETE A ROUND AND START A NEW ROUND or COME BACK FROM VIEW LOCAL HISTORY
+        if (currentSection.equals("LaunchActivity") || currentSection.equals("PaymentActivity") || currentSection.equals("ViewLocalHistoryActivity")) {
             //query accBal
             //after success query acc bal --> addControl()
             new ReqFTPserver_AccBal().execute();
@@ -79,8 +84,16 @@ public class SelectGameActivity extends AppCompatActivity {
                 }
             };
             handler.postDelayed(waitMainView, WAIT_TIME);
-        } else
+        } else{
+
+            //TODO: IN THE SAME ROUND AND WANT TO PLAY MULTI-GAMES
             addControl();
+
+            //for testing
+//            games.setCreditBal("50");
+//            games.setPointBal("50");
+        }
+
 
         btnBack = findViewById(R.id.btnBack);
         btnBack.setOnTouchListener(new View.OnTouchListener() {
@@ -103,6 +116,8 @@ public class SelectGameActivity extends AppCompatActivity {
             }
         });
 
+
+
     }
 
     //handle for hardware back button do nothing
@@ -118,9 +133,11 @@ public class SelectGameActivity extends AppCompatActivity {
         btnG5 = findViewById(R.id.btnG5);
         btnG6 = findViewById(R.id.btnG6);
         btnReplay = findViewById(R.id.btnReplay);
+        btnHistory = findViewById(R.id.btnHistory);
 
 
         btnReplay.setOnTouchListener(reqRepTicket);
+        btnHistory.setOnTouchListener(viewHistory);
         btnG1.setOnTouchListener(gameListener);
         btnG2.setOnTouchListener(gameListener);
         btnG3.setOnTouchListener(gameListener);
@@ -216,6 +233,27 @@ public class SelectGameActivity extends AppCompatActivity {
         }
     };
 
+    View.OnTouchListener viewHistory = new View.OnTouchListener() {
+        @Override
+        public boolean onTouch(View view, MotionEvent motionEvent) {
+            switch (motionEvent.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    btnHistory.setBackgroundResource(R.drawable.cus_btn_pressed);
+                    break;
+                case MotionEvent.ACTION_UP:
+                    btnHistory.setBackgroundResource(R.drawable.cus_btn_normal);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("games", new Gson().toJson(games));
+                    Intent nextI = new Intent(SelectGameActivity.this, ViewLocalHistoryActivity.class);
+                    nextI.putExtras(bundle);
+                    startActivity(nextI);
+                    break;
+            }
+
+            return  false;
+        }
+    };
+
     private void popReplayTicket() {
 
         //popup add money
@@ -288,14 +326,29 @@ public class SelectGameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                games.setPaypal("credit_more_money");
                 _popupWindow.dismiss();
 
-                new ReqFTPserver_ReqReplayTicket().execute(txtTicketNo.getText().toString());
+
                 try{
+                    new ReqFTPserver_ReqReplayTicket().execute(txtTicketNo.getText().toString());
+                    games.setPaypal("credit_more_money");
                     popupWindow = Ultis.popLoading(SelectGameActivity.this, mainView);
                 }catch (Exception e){
                     System.out.println(e);
+                    Log.d("popReplayTicket","cannot get replay ticket" + e.getMessage());
+                }finally {
+                    AlertDialog.Builder builderDialog = new AlertDialog.Builder(SelectGameActivity.this);
+                    builderDialog.setMessage("Sorry! we couldn't your recent ticket.");
+                    builderDialog.setPositiveButton(
+                            "ok",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                    Intent prevI = new Intent(SelectGameActivity.this, SelectGameActivity.class);
+                                    startActivity(prevI);
+
+                                }
+                            });
                 }
 
 
@@ -311,7 +364,11 @@ public class SelectGameActivity extends AppCompatActivity {
         protected Boolean doInBackground(Void... voids) {
 
             Context context = SelectGameActivity.this.getApplicationContext();
+
+            //test - pass through
             accInfo = Ultis.getAccBalance(context, games.getPhone_no());
+            Log.i("SelectGameAct","accInfo - " +accInfo);
+
             if (accInfo != null)
                 return true;
             return false;
@@ -320,12 +377,21 @@ public class SelectGameActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Boolean result) {
             Log.i("getAccBalance", result.toString());
+
+            //TODO FOR TESTING
+//            result = true;
+
             try {
                 if (result) {
                     popupWindow.dismiss();
                     addControl();
                     games.setCreditBal(accInfo.get("credit").toString());
                     games.setPointBal(accInfo.get("point").toString());
+
+                    //TODO FOR TESTING
+//                    games.setCreditBal("50");
+//                    games.setPointBal("50");
+
                 } else {
                     popupWindow.dismiss();
                     Toast.makeText(getApplicationContext(), "please check your account balance", Toast.LENGTH_LONG).show();

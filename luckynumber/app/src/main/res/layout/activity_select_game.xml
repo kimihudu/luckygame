@@ -82,15 +82,30 @@
         app:layout_width="prev.width" />
 
     <ImageButton
-        android:id="@+id/btnBack"
+        android:id="@+id/btnHistory"
+        android:text="History"
         android:background="@drawable/cus_btn_normal"
         app:layout_height="parent.width * 0.23"
         app:layout_width="parent.height * 0.17"
         app:layout_centerY="50% + 40%"
-        app:layout_centerX="50%"
+        app:layout_centerX="60% + 10%"
+        android:src="@mipmap/btn_view"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:background="@drawable/cus_btn_normal"
+        app:layout_height="parent.width * 0.23"
+        app:layout_width="parent.height * 0.17"
+
+        app:layout_centerY="50% + 40%"
+        app:layout_centerX="40% - 10%"
         android:src="@mipmap/btn_back_round"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"/>
+
+
 
     <ImageButton
         android:id="@+id/btnReplay"

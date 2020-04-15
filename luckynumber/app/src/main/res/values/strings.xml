@@ -8,10 +8,10 @@
     <string name="port">21</string>
     <string name="usr">Lucky</string>
     <string name="pass">175501</string>
-    <!--<string name="server">faccioapparel.com</string>-->
-    <!--<string name="port">21</string>-->
-    <!--<string name="usr">devUsr@faccioapparel.com</string>-->
-    <!--<string name="pass">B@@B@@faccio</string>-->
+<!--    <string name="server">ftp.planet-legal.com</string>-->
+<!--    <string name="port">21</string>-->
+<!--    <string name="usr">lkphandev@mpl8.planet-legal.com</string>-->
+<!--    <string name="pass">LeLeLe654$</string>-->
     <string name="loc1">BK1</string>
     <string name="loc2">FA1</string>
     <string name="loc3">JL1</string>
@@ -27,6 +27,19 @@
     <string name="lbPin">Ener Pin Number</string>
     <string name="lbSetPin">Set 5 DIGIT FOR PIN</string>
     <string name="master_pin">55555</string>
+    <string name="acc_balance_folder">Acct</string>
+    <string name="replay_ticket_folder">Replay</string>
+    <string name="lucky_local_path">Android/data/com.storematepos.luckynumber/files/</string>
+<!--    /storage/emulated/0/Android/data/com.storematepos.luckynumber/files/1234567890_fc928c28-0fe3-4b1d-85e3-99e229ce304a.json-->
+<!--    label for picking number activity-->
+    <string name="G1">LUCKY MAX</string>
+    <string name="G2">LUCKY SIX</string>
+    <string name="G3">LUCKY DICE</string>
+    <string name="G4">LUCKY GRAND</string>
+    <string name="G5">LUCKY PICK 4</string>
+    <string name="G6">LUCKY 123</string>
+    <string name="alert_text_size">23</string>
+
 </resources>
 
 

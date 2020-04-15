@@ -1,45 +1,47 @@
 package lkphandev.com.luckynumber;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.os.AsyncTask;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.v7.app.AppCompatActivity;
 import android.text.InputFilter;
 import android.text.InputType;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.mmin18.widget.FlexLayout;
 import com.google.gson.Gson;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+//import android.content.DialogInterface;
+//import android.content.res.Resources;
+//import android.support.v7.app.AlertDialog;
+//import android.widget.AdapterView;
+//import android.widget.ArrayAdapter;
+//import android.widget.Spinner;
 
-import java.io.Console;
-import java.io.IOException;
-
-import static android.widget.RadioGroup.*;
+//import org.json.JSONException;
+//import org.json.JSONObject;
+//
+//import java.io.Console;
+//import java.io.IOException;
+//
+//import static android.widget.RadioGroup.*;
 
 public class LaunchActivity extends AppCompatActivity {
     ImageButton btnStart;
     ImageButton btnPin;
-    //    ImageButton btnCheckCredit;
+    ImageButton btnHistory;
     EditText txtPhoneNo;
 
     RadioGroup groupLoc1;
@@ -130,6 +132,8 @@ public class LaunchActivity extends AppCompatActivity {
         txtPhoneNo.setSelection(txtPhoneNo.getText().length());
     }
 
+
+
     private void initFirstRun() {
 
         txtPhoneNo.setHint(R.string.lbSetPin);
@@ -193,12 +197,12 @@ public class LaunchActivity extends AppCompatActivity {
     private void addControl() {
 
         btnStart = findViewById(R.id.btnStart);
-
         lbCell_Pin.setText("PHONE NUMBER");
         txtPhoneNo.setHint("");
         txtPhoneNo.getText().clear();
         txtPhoneNo.setFilters(new InputFilter[]{new InputFilter.LengthFilter(MAX_NO)});
         txtPhoneNo.setInputType(InputType.TYPE_CLASS_NUMBER);
+
 
         btnStart.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -230,6 +234,7 @@ public class LaunchActivity extends AppCompatActivity {
             }
         });
     }
+
 
     private void displayControl() {
 
@@ -403,6 +408,7 @@ public class LaunchActivity extends AppCompatActivity {
     //TODO:/*task sending file to server */
     private class RequestFTPserver extends AsyncTask<Void, Void, Boolean> {
 
+        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         protected Boolean doInBackground(Void... voids) {
             Context context = LaunchActivity.this.getApplicationContext();
