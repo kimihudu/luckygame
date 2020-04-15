@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lkphandev.com.luckynumber.ViewLocalHistoryActivity">
+
+
+    <LinearLayout
+        android:id="@+id/center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_center">
+
+        <com.github.mmin18.widget.FlexLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lb_game_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="Local history Tickets"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                app:layout_centerX="50%"
+                app:layout_centerY="4%"
+                app:layout_height="parent.width * 0.12"
+                app:layout_width="parent.width * 0.6" />
+
+<!--            android:background="@drawable/inner_shape"-->
+            <com.github.mmin18.widget.FlexLayout
+                android:id="@+id/mainView"
+                android:background="?android:attr/activatedBackgroundIndicator"
+                app:layout_centerX="50%"
+                app:layout_centerY="50%"
+                app:layout_height="80%">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/main_bg"
+                    android:alpha="0.5"/>
+
+                <ListView
+                    android:id="@+id/listTickets"
+                    android:choiceMode="singleChoice"
+                    app:layout_centerY="50%"
+                    app:layout_height="100%"
+                    app:layout_width="parent.width"
+                    />
+
+            </com.github.mmin18.widget.FlexLayout>
+
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:adjustViewBounds="true"
+                android:background="@drawable/cus_btn_normal"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/btn_back"
+                app:layout_centerX="50% - 39%"
+                app:layout_centerY="prev.centerY + 45%"
+                app:layout_height="parent.width/8"
+                app:layout_width="parent.width/5" />
+
+            <ImageButton
+                android:id="@+id/btnView"
+                android:adjustViewBounds="true"
+                android:background="@drawable/cus_btn_normal"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/btn_view"
+                app:layout_centerX="50% + 39%"
+                app:layout_centerY="prev.centerY"
+                app:layout_height="prev.height"
+                app:layout_width="prev.width" />
+
+
+<!--            <TextView-->
+<!--                android:gravity="center|center_horizontal"-->
+<!--                android:text="@string/lb_total"-->
+<!--                android:textSize="23dp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_centerX="50% - 10%"-->
+<!--                app:layout_centerY="prev.centerY"-->
+<!--                app:layout_height="parent.width * 0.14" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/lbTotals"-->
+<!--                android:gravity="center|center_horizontal"-->
+<!--                android:text="@string/lb_dump_totals"-->
+<!--                android:textColor="@color/yellow_light"-->
+<!--                android:textSize="23dp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_centerX="prev.centerX + 20%"-->
+<!--                app:layout_centerY="prev.centerY"-->
+<!--                app:layout_height="parent.width * 0.14" />-->
+
+
+        </com.github.mmin18.widget.FlexLayout>
+    </LinearLayout>
+
+</LinearLayout>
